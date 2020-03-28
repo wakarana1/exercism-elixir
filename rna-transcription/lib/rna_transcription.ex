@@ -9,18 +9,14 @@ defmodule RnaTranscription do
   """
 
   @rna_mapping %{
-    'G' => 'C',
-    'C' => 'G',
-    'T' => 'A',
-    'A' => 'U'
+    ?G => ?C,
+    ?C => ?G,
+    ?T => ?A,
+    ?A => ?U
   }
 
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
-    dna
-    |> Enum.map(fn nucleotide ->
-      @rna_mapping[[nucleotide]]
-    end)
-    |> List.to_charlist()
+    Enum.map(dna, &@rna_mapping[&1])
   end
 end
