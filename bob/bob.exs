@@ -28,15 +28,13 @@ defmodule Bob do
 
   def shouting?(string) do
     if Regex.match?(~r/\p{Lu}{2,}/u, string) == true do
-      copy = String.upcase(string)
-      string == copy
+      string == String.upcase(string)
     else
       false
     end
   end
 
   def silence?(string) do
-    trimmed = String.trim(string)
-    trimmed == ""
+    String.trim(string) == ""
   end
 end
