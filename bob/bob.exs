@@ -27,11 +27,7 @@ defmodule Bob do
   end
 
   def shouting?(string) do
-    if Regex.match?(~r/\p{Lu}{2,}/u, string) == true do
-      string == String.upcase(string)
-    else
-      false
-    end
+    String.upcase(string) != String.downcase(string)
   end
 
   def silence?(string) do
