@@ -5,3 +5,4 @@ Elixir exercises
 - RNA transcription
 - Bob
 - Nucleotide Count
+- Accumulate
