@@ -6,3 +6,4 @@ Elixir exercises
 - Bob
 - Nucleotide Count
 - Accumulate
+- Word Count
