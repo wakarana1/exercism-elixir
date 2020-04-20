@@ -7,3 +7,4 @@ Elixir exercises
 - Nucleotide Count
 - Accumulate
 - Word Count
+- Protein Translation
