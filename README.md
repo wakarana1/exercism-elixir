@@ -8,3 +8,4 @@ Elixir exercises
 - Accumulate
 - Word Count
 - Protein Translation
+- Two-Fer
