@@ -11,3 +11,4 @@ Elixir exercises
 - Two-Fer
 - Roman Numerals
 - Matching Brackets
+- Beer Song
