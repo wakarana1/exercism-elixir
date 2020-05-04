@@ -20,7 +20,7 @@ defmodule MatchingBrackets do
   defp has_matching_brackets("{" <> rest, acc, has_matches),
     do: has_matching_brackets(rest, "{" <> acc, has_matches)
 
-  defp has_matching_brackets(")" <> rest, acc, has_matches) do
+  defp has_matching_brackets(")" <> rest, acc, _) do
     if String.starts_with?(acc, "(") do
       has_matching_brackets(rest, String.slice(acc, 1..-1), true)
     else
@@ -28,7 +28,7 @@ defmodule MatchingBrackets do
     end
   end
 
-  defp has_matching_brackets("]" <> rest, acc, has_matches) do
+  defp has_matching_brackets("]" <> rest, acc, _) do
     if String.starts_with?(acc, "[") do
       has_matching_brackets(rest, String.slice(acc, 1..-1), true)
     else
@@ -36,7 +36,7 @@ defmodule MatchingBrackets do
     end
   end
 
-  defp has_matching_brackets("}" <> rest, acc, has_matches) do
+  defp has_matching_brackets("}" <> rest, acc, _) do
     if String.starts_with?(acc, "{") do
       has_matching_brackets(rest, String.slice(acc, 1..-1), true)
     else
