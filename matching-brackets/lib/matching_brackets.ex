@@ -44,6 +44,6 @@ defmodule MatchingBrackets do
     end
   end
 
-  defp has_matching_brackets(<<char::utf8, rest::binary>>, acc, has_matches),
+  defp has_matching_brackets(<<_, rest::binary>>, acc, has_matches),
     do: has_matching_brackets(rest, acc, has_matches)
 end
